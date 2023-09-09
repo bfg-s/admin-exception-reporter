@@ -4,6 +4,7 @@ namespace Admin\Extend\AdminExceptionReporter\Extension;
 
 use Admin\Core\NavigatorExtensionProvider;
 use Admin\Extend\AdminExceptionReporter\AdminExceptionReporterController;
+use Admin\Extend\AdminExceptionReporter\Models\ExceptionModel;
 use Admin\Interfaces\ActionWorkExtensionInterface;
 
 /**
@@ -20,6 +21,7 @@ class Navigator extends NavigatorExtensionProvider implements ActionWorkExtensio
 
         $this->item('Exceptions')
             ->resource('exceptions', AdminExceptionReporterController::class)
-            ->icon_concierge_bell();
+            ->icon_bolt()
+            ->badge_danger(ExceptionModel::class, ['id' => 'not null']);
     }
 }
