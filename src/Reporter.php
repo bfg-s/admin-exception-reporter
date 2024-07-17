@@ -98,7 +98,7 @@ class Reporter
 
             return true;
         } catch (Throwable $e) {
-            dd($e);
+            //dd($e);
             return false;
         }
     }
