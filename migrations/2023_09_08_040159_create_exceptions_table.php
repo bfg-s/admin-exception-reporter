@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('type', 255);
             $table->string('code');
-            $table->string('message', 255);
+            $table->text('message');
             $table->string('file', 255);
             $table->integer('line');
             $table->text('trace');
